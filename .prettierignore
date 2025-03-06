@@ -1,0 +1,40 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore artifacts:
+build
+dist
+.next
+.vercel
+coverage
+*.lock
+
+# Ignore config files:
+.eslintrc.json
+.stylelintrc.json
+
+# Ignore data files:
+*.csv
+*.jsonl
+
+# Ignore markdown build artifacts:
+*.md.rendered
+
+# Ignore generated files:
+**/generated/**
+**/__generated__/**
+**/node_modules/**
+
+# Ignore prisma client
+./prisma/client
+
+# Ignore specific files
+pnpm-lock.yaml
+
+# Ignore SVG files inside a specific directory
+public/images/*.svg
+
+# Ignore files with specific extensions
+*.svg
+*.png

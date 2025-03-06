@@ -1,0 +1,21 @@
+import type { Prisma } from '@prisma/client';
+import { z } from 'zod';
+
+export const VitalSignsCreateWithoutMedicalInputSchema: z.ZodType<Prisma.VitalSignsCreateWithoutMedicalInput> =
+  z
+    .object({
+      patient_id: z.string(),
+      body_temperature: z.number(),
+      systolic: z.number().int(),
+      diastolic: z.number().int(),
+      heartRate: z.string(),
+      respiratory_rate: z.number().int().optional().nullable(),
+      oxygen_saturation: z.number().int().optional().nullable(),
+      weight: z.number(),
+      height: z.number(),
+      created_at: z.coerce.date().optional(),
+      updated_at: z.coerce.date().optional(),
+    })
+    .strict();
+
+export default VitalSignsCreateWithoutMedicalInputSchema;
